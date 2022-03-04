@@ -2,7 +2,7 @@ import React from 'react'
 
 function Education() {
   return (
-    <div className='px-6 md:px-8 w-full'>
+    <div className='px-6 md:px-8 w-full my-12 md:m-2'>
         <ul className='list-disc text-justify'>
             <li>
                 <div className='flex flex-row justify-between'>

@@ -2,7 +2,7 @@ import React from 'react'
 
 function Programming() {
   return (
-    <div className='px-6 md:px-8 w-full'>
+    <div className='px-6 md:px-8 w-full my-12 md:m-2'>
         <ul className='list-disc text-justify px-4 text-lg font-bold'>
             <li className='text-[tomato]'>
                 Javascript

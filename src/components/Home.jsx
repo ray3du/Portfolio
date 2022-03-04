@@ -1,7 +1,8 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { FaAlignJustify, FaGithub, FaTwitter } from 'react-icons/fa'
 import { Link } from 'react-scroll'
 import Typical from 'react-typical'
+import pdf from '../public/CV_2022-03-04_Edwin_Ngugi.pdf'
 
 function Home() {
 
@@ -27,6 +28,7 @@ function Home() {
             <Link to="resume" spy={true} smooth={true} duration={500} className='pb-6 text-md hover:opacity-50  hover:cursor-pointer'>Resume</Link>
             <Link to="contact" spy={true} smooth={true} duration={500} className='text-md hover:opacity-50  hover:cursor-pointer'>Contact</Link>
         </div>
+        {navbar === "hidden" ? 
         <div className='flex flex-col py-6 md:flex-row md:justify-between  w-7/12 md:w-7/12 m-auto'>
             <div className="flex flex-col justify-between mt-8 md:mt-20 w-full">
                 <p className='text-2xl'>Hi I'm Edwin <span className='text-red-500'>(ray3du)</span></p>
@@ -45,18 +47,20 @@ function Home() {
                 </div>
                 <p>Take a dive into my coding journey.</p>
                 <div className='flex flex-row my-8 justify-center'>
-                    <Link to="contact" spy={true} smooth={true} duration={500} className='border border-white rounded-lg shadow py-2 px-6 text-sm mr-2 hover:cursor-pointer hover:opacity-50' >Hire Me</Link>
-                    <Link to="resume" spy={true} smooth={true} duration={500}  className='bg-[tomato] text-sm py-2 px-6 rounded-lg shadow hover:cursor-pointer hover:opacity-50'>Resume</Link>
+                    <Link to="contact" spy={true} smooth={true} duration={500} className='border border-white rounded-lg shadow py-2 px-6 md:px-16 text-xs md:text-sm mr-2 hover:cursor-pointer hover:opacity-50' >Hire Me</Link>
+                    <a href={pdf} className='bg-[tomato] text-xs md:text-sm py-2 px-2 md:px-6 rounded-lg shadow hover:cursor-pointer hover:opacity-50' download="Edwin Ngugi CV.pdf" target="_blank">Download Resume</a>
                 </div>
                 <div className="flex flex-row text-white justify-center mb-4">
-                    <a href="https://github.com/ray3du" className='mr-4 hover:cursor-pointer hover:opacity-50 text-xl'><FaGithub /></a>
-                    <a href="https://twitter.com/ray_3du" className='mr-4 hover:cursor-pointer hover:opacity-50 text-xl'><FaTwitter /></a>
+                    <a href="https://github.com/ray3du" target="_blank" className='mr-4 hover:cursor-pointer hover:opacity-50 text-xl'><FaGithub /></a>
+                    <a href="https://twitter.com/ray_3du" target="_blank" className='mr-4 hover:cursor-pointer hover:opacity-50 text-xl'><FaTwitter /></a>
                 </div>
             </div>
             <div className=''>
                 {/* <p>Image</p> */}
             </div>
         </div>
+        : null
+        }
     </div>
   )
 }
