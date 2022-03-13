@@ -34,7 +34,7 @@ function Home() {
                 <p className='text-2xl'>Hi I'm Edwin <span className='text-red-500'>(ray3du)</span></p>
                 <div>
                 <Typical
-                    className='text-xl sm:text-4xl my-4'
+                    className='text-md xs:text-xl sm:text-4xl my-4'
                     steps={[
                         'Web Developer', 1000, 
                         'Full Stack Developer', 1000,

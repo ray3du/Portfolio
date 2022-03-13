@@ -9,7 +9,7 @@ function Resume() {
     const [choice, setChoice] = useState(1)
 
     return (
-    <div className='bg-white h-screen my-8' id='resume'>
+    <div className='bg-white min-h-full my-8' id='resume'>
         <div>
             <p className='pt-8 font-bold text-2xl'>Resume</p>
             <p className='pt-4'>My formal details</p>
@@ -24,7 +24,7 @@ function Resume() {
                         <span className='mb-2'><i><FaDesktop/></i></span>
                         <span className='mb-5'><i><FaAward/></i></span>
                     </div>
-                    <div className=' flex flex-col items-start mr-6 ml-2 leading-10 py-6 pl-2 pr-6'>
+                    <div className=' flex flex-col items-start mr-6 ml-2 leading-10 py-6 pl-2 pr-6 min-h-[90%]'>
                         {choice == 1 ? 
                             <input type="submit" value="Education" className='mb-4 hover:cursor-pointer bg-slate-800 text-white w-full -ml-4 rounded-tr-full rounded-br-full hover:opacity-50' onClick={() => setChoice(1)} />
                         :   <input type="submit" value="Education" className='mb-4 hover:cursor-pointer' onClick={() => setChoice(1)} />        
@@ -43,6 +43,7 @@ function Resume() {
                         }   
                     </div>
                 </div>
+                <div className="min-h-full">
                 {choice == 1 ? 
                         <Education />
                     : choice == 2 ?
@@ -54,6 +55,7 @@ function Resume() {
                     :
                         null
                 }
+                </div>
             </div>
         </div>
     </div>
