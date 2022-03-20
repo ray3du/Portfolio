@@ -46,8 +46,17 @@ function Contact() {
             setSuccess("")
             setTruncate("")
         })
-        
     }
+  }
+
+  const handleCancelSuccess = () => {
+    setTruncate("hidden")
+    setSuccess("")
+  }
+
+  const handleCancelError = () => {
+    setTruncate("hidden")
+    setErrors("")
   }
 
   return (
@@ -58,13 +67,13 @@ function Contact() {
         {success !== "" ?
           <div className={'w-11/12 md:w-7/12 m-auto bg-sky-300 rounded text-center text-white py-4 my-4 flex flex-row justify-between ' + truncate}>
             <p className='px-2 truncate'>{success}</p>
-            <input type="submit" value="X" className='px-3 hover:cursor-pointer' onClick={() => setTruncate("hidden")}/>
+            <button className='px-3 hover:cursor-pointer' onClick={() => handleCancelSuccess()} >X</button>
           </div> : null  
         }
         {errors !== "" ?
           <div className={'w-11/12 md:w-7/12 m-auto bg-red-500 rounded text-center text-white py-4 my-4 flex flex-row justify-between ' + truncate}>
             <p className='px-2 truncate'>{errors}</p>
-            <input type="submit" value="X" className='px-3 hover:cursor-pointer' onClick={() => setTruncate("hidden")}/>
+            <button className='px-3 hover:cursor-pointer' onClick={() => handleCancelError()}>X</button>
           </div> : null  
         }
       
