@@ -31,21 +31,22 @@ function Contact() {
       setErrors("Please fill in all fields")
       setTruncate("")
     } else {
+      setLoading(true)
       emailjs.sendForm(SERVICE_ID, TEMPLATE_ID, form.current, USER_ID)
         .then((result) => {
             setSuccess("Your message was delivered successully")
             setErrors("")
             setTruncate("")
-            setValues({...values, user_email: ''})
-            setValues({...values, user_name: ''})
-            setValues({...values, message: ''})
-        }, (error) => {
+            setValues({...values, user_email: '', user_name: '', message: ''})
+            setLoading(false)
+
+          }, (error) => {
+            setLoading(false)
             setErrors(error.text)
             setSuccess("")
             setTruncate("")
         })
         
-      setLoading(false)
     }
   }
 
@@ -74,11 +75,11 @@ function Contact() {
               <input type="text" name="user_name" value={values.user_name} onChange={handleChange} className='py-3 px-2 my-2 bg-slate-300 outline-none rounded text-gray-700' autoComplete='off'/>
             </div>
             <div className='flex flex-col'>
-              <label htmlFor="name">Email</label>
-              <input type="text" name="user_email" value={values.user_email} onChange={handleChange} className='py-3 px-2 my-2 bg-slate-300 outline-none rounded text-gray-700' autoComplete='off'/>
+              <label htmlFor="email">Email</label>
+              <input type="email" name="user_email" value={values.user_email} onChange={handleChange} className='py-3 px-2 my-2 bg-slate-300 outline-none rounded text-gray-700' autoComplete='off'/>
             </div>
             <div className='flex flex-col'>
-              <label htmlFor="name">Message</label>
+              <label htmlFor="message">Message</label>
               <textarea name="message" rows="2" value={values.message} onChange={handleChange} className='py-3 px-2 my-2 bg-slate-300 outline-none rounded text-gray-700' autoComplete='off'/>
             </div>
             <input type="submit" value={ loading ? "Sending .." : "Send"} className={loading ? 'my-4 px-4 py-2 bg-[tomato] rounded text-white hover:opacity-50' :'my-4 px-4 py-2 bg-[tomato] rounded text-white hover:cursor-pointer'} />
