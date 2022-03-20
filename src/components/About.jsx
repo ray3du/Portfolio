@@ -4,7 +4,7 @@ import profile from '../public/profile.jpg'
 
 function About() {
   return (
-    <div className='bg-white text-black my-12' id="about">
+    <div className='bg-white min-h-screen text-black my-12' id="about">
         <div>
             <p className='my-6 font-bold text-2xl'>About Me</p>
             <div className='flex flex-col sm:flex-row w-11/12 lg:w-8/12 m-auto border border-gray-200 h-[80%] rounded shadow-lg'>

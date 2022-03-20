@@ -50,7 +50,7 @@ function Contact() {
   }
 
   return (
-    <div className='bg-white sm:mt-12 md:mt-4' id='contact' >
+    <div className='bg-white min-h-screen sm:mt-12 md:mt-4' id='contact' >
       <div className='my-2'>
         <p className='font-bold text-xl pt-8 pb-4'>Contact Me</p>
         <p className='text-gray-600'>Send an email using the form below</p>

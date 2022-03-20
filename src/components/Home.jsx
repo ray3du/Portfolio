@@ -9,7 +9,7 @@ function Home() {
     const [navbar, setNavBar] = useState("hidden")
 
   return (
-    <div className='bg-slate-900 h-screen text-white relative' id='home'>
+    <div className='bg-slate-900 min-h-screen text-white relative' id='home'>
         <div className='py-8 flex flex-row justify-center items-center justify-between'>
             <p className='hidden md:block md:w-4/12 text-3xl font-bold'>Ray3du.com</p>
             {navbar === "hidden" ? 
@@ -23,10 +23,10 @@ function Home() {
         </div>
         <div className={'md:flex md:flex-row md:items-start md:justify-end md:h-[50px] md:justify-evenly md:absolute md:right-0 md:w-8/12 flex flex-col items-center justify-center leading-8 bg-slate-500 md:bg-transparent sm:text-white h-screen relative -mt-16 ' + navbar}>
             <input type="submit" value="X" className='md:hidden absolute top-4 right-6 text-3xl hover:cursor-pointer hover:opacity-50' onClick={() => setNavBar("hidden")}/>
-            <Link to="home" className='text-md text-red-500 font-bold hover:opacity-50 pb-6'>Home</Link>
-            <Link to="about" spy={true} smooth={true} duration={500} className='pb-6 text-md hover:opacity-50 hover:cursor-pointer'>About Me</Link>
-            <Link to="resume" spy={true} smooth={true} duration={500} className='pb-6 text-md hover:opacity-50  hover:cursor-pointer'>Resume</Link>
-            <Link to="contact" spy={true} smooth={true} duration={500} className='text-md hover:opacity-50  hover:cursor-pointer'>Contact</Link>
+            <Link to="home" className='text-md text-red-500 font-bold hover:opacity-50 pb-6' onClick={() => setNavBar("hidden")}>Home</Link>
+            <Link to="about" spy={true} smooth={true} duration={500} className='pb-6 text-md hover:opacity-50 hover:cursor-pointer' onClick={() => setNavBar("hidden")}>About Me</Link>
+            <Link to="resume" spy={true} smooth={true} duration={500} className='pb-6 text-md hover:opacity-50  hover:cursor-pointer' onClick={() => setNavBar("hidden")}>Resume</Link>
+            <Link to="contact" spy={true} smooth={true} duration={500} className='text-md hover:opacity-50  hover:cursor-pointer' onClick={() => setNavBar("hidden")}>Contact</Link>
         </div>
         {navbar === "hidden" ? 
         <div className='flex flex-col py-6 md:flex-row md:justify-between  w-7/12 md:w-7/12 m-auto'>

@@ -9,7 +9,7 @@ function Resume() {
     const [choice, setChoice] = useState(1)
 
     return (
-    <div className='bg-white min-h-full my-8' id='resume'>
+    <div className='bg-white min-h-screen my-8' id='resume'>
         <div>
             <p className='pt-8 font-bold text-2xl'>Resume</p>
             <p className='pt-4'>My formal details</p>
