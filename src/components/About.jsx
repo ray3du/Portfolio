@@ -16,7 +16,7 @@ function About() {
                   <li>Profficient in developing DAPP using solidity and React.</li>
                   <li>Building robust and complex websites using Reactjs.</li>
                   <li>Designing and developing modern android applications.</li>
-                  <li>Designing and developing modern android applications.</li>
+                  <li>Designing and developing of secure API's with Django.</li>
                 </ul>
                 <div className='flex flex-row pt-4 sm:pt-12 md:pt-4 justify-center'>
                   <Link to="resume" className='bg-slate-800 text-white mr-8 rounded-full shadow-lg py-2 px-6 text-sm mr-2 hover:cursor-pointer hover:opacity-50'>Resume</Link>
